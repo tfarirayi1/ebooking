@@ -7,32 +7,32 @@
         "thumb":"/src/images/candy1.png"
     },
     {
-        "title":"Sweet & Tangy Candy Cane",
-        "price":0.87,
+        "title":"Ladies Wash & Cut",
+        "price":27,
         "description":"Raspberry flavoured hard candy.",
         "thumb":"/src/images/candy2.png"
     },
     {
-        "title":"apple ball pop",
-        "price":0.76,
+        "title":"Ladies Wash & Finish",
+        "price":23,
         "description":"Sherbert core apple flavoured lollipop.",
         "thumb":"/src/images/candy3.png"
     },
     {
-        "title":"Caramel Chewy core",
-        "price":0.24,
+        "title":"Full Head Highlights",
+        "price":62,
         "description":"Hard boiled caramel flavoured sweet.",
         "thumb":"/src/images/candy4.png"
     },
     {
-        "title":"sour grape core",
-        "price":0.24,
+        "title":"Half Head Highlights",
+        "price":52,
         "description":"Grape flavoured sherbert core boiled sweet.",
         "thumb":"/src/images/candy6.png"
     },
     {
-        "title":"chewy melon swirl",
-        "price":0.80,
+        "title":"Partial Highlights",
+        "price":48,
         "description":"Watermelon flavoured chewy candy.",
         "thumb":"/src/images/candy5.png"
     }

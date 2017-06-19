@@ -15,10 +15,6 @@ Welcome box element
         background-color: rgba(207,216,220 ,1);
         background-color: #ECEFF1;
         box-sizing: border-box;
-        border: 1px ridge #FF8A65;
-        border: 1px solid #CFD8DC;
-        border: 1px inset rgba(255,138,101 ,0.9);
-        border: 1px solid #CFD8DC;
         border-radius: 8px;
         color: #212121;
         font-family: 'Raleway', sans-serif;
@@ -43,15 +39,18 @@ Welcome box element
 
       paper-button.enter {
         background-color: rgba(38,50,56 ,0.9);
-        /*border: 1px ridge #455A64;*/
-        border-radius: 2px;
+        border: 1px inset rgba(38,50,56 ,0.1);
+        border-radius: 1px;
         color: #FF8A65;
         font-size: 14px;
         max-height: 36px;
         padding-left: 8px;
         padding-right: 8px;
+        max-height: 32px;
         margin-top: 8px;
         text-align: center;
+        line-height: 120%;
+        letter-spacing: 1px;
       }
 
       a {
@@ -64,7 +63,7 @@ Welcome box element
     </div>
     <div class="enter">
       <a href="/list">
-        <paper-button raised class="enter">Shop</paper-button>
+        <paper-button class="enter">Shop</paper-button>
       </a>
     </div>
 

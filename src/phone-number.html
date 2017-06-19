@@ -12,9 +12,6 @@ Phone number element
         :host {
             display: block;
             background-color: #ECEFF1;
-            border: 1px solid #CFD8DC;
-            border: 1px ridge #FF8A65;
-            border: 1px solid #CFD8DC;
             border-radius: 8px;
             box-sizing: border-box;
             font-family: 'Arvo', monospace;
@@ -23,9 +20,21 @@ Phone number element
             margin-top: -13px;
             max-width: 300px;
             padding: 13px;
+            padding-bottom: 21px;
             @apply(--shadow-elevation-2dp);
         }
           
+        .dot {
+            text-align: center;
+            font-size: 16px;
+            border-bottom: 1px solid #607D8B;
+            color: #607D8B;
+            width: 1px;
+            margin: auto;
+            margin-top: 21px;
+            margin-bottom: 21px;
+        }
+
         span.desc {
             display: block;
         }
@@ -71,9 +80,9 @@ Phone number element
     <!-- Dom here -->
 
     <div class="sep-title">
-        <p>PHONE US</p>.
+        <p>PHONE US</p>
     </div>
-  
+    <div class="dot"></div>
     <div class="sec">
       <a href="tel:+447449940700">074 499 407 00</a>
         <span class="desc">

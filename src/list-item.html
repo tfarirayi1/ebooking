@@ -27,9 +27,7 @@ Shop list item (Single product detail)
       :host {
         display: block;
         background-color: #ECEFF1;
-        border: 1px ridge rgba(255,138,101 ,0.4);
-        border: 1px solid #CFD8DC;
-        
+        /*border: 1px ridge rgba(255,138,101 ,0.4);*/
         border-radius: 8px 8px 1px 1px;
         box-sizing: border-box;
         color: #212121;
@@ -38,11 +36,11 @@ Shop list item (Single product detail)
         margin-right: auto;
         margin-top: -13px;
         max-width: 300px;
-        @apply(--shadow-elevation-4dp);
+        @apply(--shadow-elevation-2dp);
       }
 
       :host([choose]) {
-        @apply(--shadow-elevation-6dp);
+        @apply(--shadow-elevation-4dp);
       }
 
       .main {
@@ -270,7 +268,7 @@ Shop list item (Single product detail)
           [[title]]
         </span>
         <span class="price">
-          [[_formatPrice(price)]]
+          [[_formatPrice(price)]] +
         </span>
         <iron-icon class="arrow" icon="[[arrow]]"></iron-icon>
       </paper-button>

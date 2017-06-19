@@ -57,18 +57,25 @@ Main application container element
 s      }      
 
       paper-fab.basket {
-        color: #37474F;
-        --paper-fab-background: rgba(236,239,241 ,1);
+        color:rgba(38,50,56 ,0.8);
+        /*--paper-fab-background: rgba(236,239,241 ,1);*/
+        --paper-fab-background: rgb(239, 241, 243);
         --paper-fab-keyboard-focus-background: rgba(255,138,101 ,0.1);
-        border: 1px inset rgba(255,138,101 ,0.9);
-        padding: 0px 8px;
+        /*border: 1px inset rgba(255,138,101 ,0.8);*/
+        /*border: 1px inset #CFD8DC;*/
+        /*padding: 0px 8px;*/
         @apply(--shadow-elevation-4dp);
         margin-left: 5px;
         margin-right: 5px;
         --paper-fab-disabled-background: red;
         
+      --paper-fab-mini: {
+        width: 42px;
+        height: 42px;
+      }
 
       }
+
 
       iron-pages {
         padding: 13px 0px;
@@ -92,6 +99,12 @@ s      }
         @apply(--layout-center-justified);
       }
 
+      a {
+        color: rgba(38,50,56 ,1);
+        outline: none;
+        /*margin: 0px 5px;*/
+      }
+
       .home {
         color: rgba(255,138,101 ,0.8);
       }
@@ -100,11 +113,6 @@ s      }
         color: rgba(255,138,101 ,0.7);
       }
 
-      a {
-        color: rgba(38,50,56 ,1);
-        outline: none;
-        /*margin: 0px 5px;*/
-      }
 
       a:hover {
         color: #78909C;
@@ -135,17 +143,12 @@ s      }
 
         <!-- Header Content -->
         <app-header-layout fullbleed>
-          <app-header condenses id="header" fixed>
+          <app-header  id="header" condenses fixed>
             <!-- Toolbar -->
             <app-toolbar class="top-bar">
               <div class="tools">
-
-                  <a href="https://ohwd.co.uk" target="_blank" class="home">
-                <paper-fab id="top-icon" class="basket" noink mini icon="icon:domain"></paper-fab>
-                  </a>
-
                   <a href="/info">
-                <paper-fab id="top-icon" class="basket" noink mini icon="icon:info"></paper-fab>
+                <paper-fab id="top-icon" class="basket" noink mini icon="icon:info-outline"></paper-fab>
                   </a>
 
                   <a href="/phone">
@@ -153,9 +156,12 @@ s      }
                   </a>
 
                   <a href="/contact">
-                <paper-fab id="top-icon" class="basket" noink mini icon="icon:mail"></paper-fab>
+                <paper-fab id="top-icon" class="basket" noink mini icon="icon:mail-outline"></paper-fab>
                   </a>
 
+                  <a href="https://ohwd.co.uk" target="_blank" class="home">
+                <paper-fab id="top-icon" class="basket" style="color: rgba(255,138,101 ,0.9);" noink mini icon="icon:domain"></paper-fab>
+                  </a>
               </div>
             </app-toolbar>
             <app-toolbar class="bottom-bar" sticky>

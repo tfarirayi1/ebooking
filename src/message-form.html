@@ -22,17 +22,26 @@ Message form element with lambda function
             :host {
                 display: block;
                 background-color: #ECEFF1;
-                border: 1px solid #CFD8DC;
-                border: 1px ridge #FF8A65;
-                border: 1px solid #CFD8DC;
                 border-radius: 8px;
                 box-sizing: border-box;
                 padding: 13px;
+                padding-bottom: 21px;
                 margin-left: auto;
                 margin-right: auto;
                 margin-top: -13px;
                 max-width: 300px;
                 @apply(--shadow-elevation-2dp);
+            }
+
+            .dot {
+                text-align: center;
+                font-size: 16px;
+                border-bottom: 1px solid #607D8B;
+                color: #607D8B;
+                width: 1px;
+                margin: auto;
+                margin-top: 21px;
+                margin-bottom: 21px;
             }
 
             paper-input-container {
@@ -120,9 +129,9 @@ Message form element with lambda function
         <!-- Dom here -->
 
         <div class="sep-title">
-            <p>MESSAGE US</p>.
+            <p>MESSAGE US</p>
         </div>
-        
+        <div class="dot"></div>
         <!-- Email field -->
         <paper-input-container  always-float-label>
             <label>Email</label>
@@ -143,7 +152,8 @@ Message form element with lambda function
 
         <div class="email">
             <p>
-                <a class="address" href="mailto:tich.farirayi@kioskwebdev.co.uk"><u class="title">tich.farirayi@kioskwebdev.co.uk</u></a>
+                Direct
+                <a class="address" href="mailto:tich.farirayi@kioskwebdev.co.uk">tich.farirayi@kioskwebdev.co.uk</a>
             </p>
         </div>
         

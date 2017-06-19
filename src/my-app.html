@@ -34,27 +34,40 @@ Main application container element
       }
 
       app-header {
-       height: 112px;
+       height: 114px;
+        /*background-color: rgba(255,138,101 ,0.1);*/
+        /*@apply(--shadow-elevation-6dp);*/
+        border-radius: 0px 0px 8px 8px;
+        /*border-bottom: 1px ridge rgba(255,138,101 ,0.9);*/
       }
 
       app-toolbar.top-bar {
-        height: 50px;
+        height: 60px;
         @apply(--layout-center-justified);
         @apply(--layout-horizontal);
         @apply(--layout-end);
       }
 
       app-toolbar.bottom-bar {
-        height: 62px; 
+        height: 54px; 
+        /*border: 1px solid #CFD8DC;*/
         @apply(--layout-horizontal);
         @apply(--layout-end);
         @apply(--layout-center-justified);
-      }      
+s      }      
 
       paper-fab.basket {
-        color: #263238;
-        --paper-fab-background: #ECEFF1;
-        --paper-fab-keyboard-focus-background: #CFD8DC;
+        color: #37474F;
+        --paper-fab-background: rgba(236,239,241 ,1);
+        --paper-fab-keyboard-focus-background: rgba(255,138,101 ,0.1);
+        border: 1px inset rgba(255,138,101 ,0.9);
+        padding: 0px 8px;
+        @apply(--shadow-elevation-4dp);
+        margin-left: 5px;
+        margin-right: 5px;
+        --paper-fab-disabled-background: red;
+        
+
       }
 
       iron-pages {
@@ -88,18 +101,22 @@ Main application container element
       }
 
       a {
-        color: #546E7A;
+        color: rgba(38,50,56 ,1);
+        outline: none;
+        /*margin: 0px 5px;*/
       }
 
       a:hover {
         color: #78909C;
+        color: rgba(38,50,56 ,0.8);
+        
       }
 
-      iron-icon {
-        --iron-icon-height: 25px;
-        --iron-icon-width: 25px;
-        padding: 0px 8px;
-      }
+      /*iron-icon {
+        --iron-icon-height: 26px;
+        --iron-icon-width: 26px;
+        padding: 0px 13px;
+      }*/
     </style>
 
     <app-location id="location" route="{{route}}"></app-location>
@@ -122,23 +139,23 @@ Main application container element
             <!-- Toolbar -->
             <app-toolbar class="top-bar">
               <div class="tools">
+
                   <a href="https://ohwd.co.uk" target="_blank" class="home">
-                    <iron-icon icon="icon:domain"></iron-icon>
+                <paper-fab id="top-icon" class="basket" noink mini icon="icon:domain"></paper-fab>
                   </a>
 
-                  <span class="spacer"></span>
-
                   <a href="/info">
-                    <iron-icon icon="icon:info-outline"></iron-icon>
+                <paper-fab id="top-icon" class="basket" noink mini icon="icon:info"></paper-fab>
                   </a>
 
                   <a href="/phone">
-                    <iron-icon icon="icon:phone-iphone"></iron-icon>
+                <paper-fab id="top-icon" class="basket" noink mini icon="icon:phone-iphone"></paper-fab>
                   </a>
 
                   <a href="/contact">
-                    <iron-icon icon="icon:mail"></iron-icon>
+                <paper-fab id="top-icon" class="basket" noink mini icon="icon:mail"></paper-fab>
                   </a>
+
               </div>
             </app-toolbar>
             <app-toolbar class="bottom-bar" sticky>
@@ -146,10 +163,10 @@ Main application container element
                 <div class="bottom main-title">
 
                   <a href="/basket">
-                <paper-fab id="basket-icon" class="basket" mini icon="icon:shopping-basket"></paper-fab>
+                <paper-fab id="basket-icon" class="basket" noink mini icon="icon:assignment"></paper-fab>
                   </a>
                 
-                <paper-badge class="numitems" for="basket-icon" label="[[numItems]]"></paper-badge>
+                <!--<paper-badge class="numitems" for="basket-icon" label="[[numItems]]"></paper-badge>-->
                 </div>
             </app-toolbar>
           </app-header>
@@ -176,11 +193,6 @@ Main application container element
               <shop-basket name="basket" basket="[[basket]]" total="[[total]]" num-items="[[numItems]]" unresolved></shop-basket>
 
           </iron-pages>
-          <span class="spacer"></span>
-          <div class="my-footer">
-            &copy; [[year]] Orange House Web Developments&trade;
-          </div>
-
         </app-header-layout>
      
   </template>

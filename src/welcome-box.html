@@ -13,8 +13,12 @@ Welcome box element
       :host {
         display: block;
         background-color: rgba(207,216,220 ,1);
+        background-color: #ECEFF1;
         box-sizing: border-box;
-        border: 1px outset #FF8A65;
+        border: 1px ridge #FF8A65;
+        border: 1px solid #CFD8DC;
+        border: 1px inset rgba(255,138,101 ,0.9);
+        border: 1px solid #CFD8DC;
         border-radius: 8px;
         color: #212121;
         font-family: 'Raleway', sans-serif;
@@ -28,7 +32,7 @@ Welcome box element
 
       .main {
         text-align: center;
-        color: #212121;
+        color: rgba(38,50,56 ,1);
       }
 
       .enter {
@@ -38,9 +42,9 @@ Welcome box element
       }
 
       paper-button.enter {
-        background-color: #263238;
-        border: 1px solid #455A64;
-        border-radius: 8px;
+        background-color: rgba(38,50,56 ,0.9);
+        /*border: 1px ridge #455A64;*/
+        border-radius: 2px;
         color: #FF8A65;
         font-size: 14px;
         max-height: 36px;
@@ -56,11 +60,11 @@ Welcome box element
     </style>
     <!-- Local dom here -->
     <div class="main"><p>
-      Welcome to the demo site of our ESHOP implementation. <br><br>Use the card details provided to make a pseudo purchase. Your order will be processed and you will be alerted through the email you supply.</p>
+      Welcome to the<br>OHWA E-Booking demo.<br><br>Use the card details provided to make a pseudo purchase. Your order will be processed and you will be alerted through the email you supply.</p>
     </div>
     <div class="enter">
       <a href="/list">
-        <paper-button class="enter">Enter</paper-button>
+        <paper-button raised class="enter">Shop</paper-button>
       </a>
     </div>
 

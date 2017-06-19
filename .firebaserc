@@ -1,6 +1,7 @@
 {
   "projects": {
     "dev": "eshop-demo",
-    "test": "ohwd-ff3d8"
+    "test": "ohwd-ff3d8",
+    "shop": "eshop-demo"
   }
 }

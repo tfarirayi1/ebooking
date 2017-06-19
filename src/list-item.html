@@ -27,10 +27,13 @@ Shop list item (Single product detail)
       :host {
         display: block;
         background-color: #ECEFF1;
-        border: 1px outset #CFD8DC;
+        border: 1px ridge rgba(255,138,101 ,0.4);
+        border: 1px solid #CFD8DC;
+        
         border-radius: 8px 8px 1px 1px;
         box-sizing: border-box;
         color: #212121;
+        color: rgba(38,50,56 ,1);
         margin-left: auto;
         margin-right: auto;
         margin-top: -13px;
@@ -94,8 +97,12 @@ Shop list item (Single product detail)
       }
       
       iron-collapse {
-        background-color:#37474F;
+        background-color:rgba(38,50,56 ,0.1);
+        background-color: rgba(255,138,101 ,0.1);
         @apply(--layout-vertical);
+        border-top: 1px ridge rgba(255,138,101 ,0.4);
+        border-top: 1px ridge rgba(38,50,56 ,0.1);
+        
       }
     
       .collapse {
@@ -106,6 +113,7 @@ Shop list item (Single product detail)
 
       .desc {
         color: #ECEFF1;
+        color: rgba(38,50,56 ,1);
         font-family: 'Comfortaa', cursive;     
         font-size: 15px;  
         line-height: 140%;
@@ -120,17 +128,27 @@ Shop list item (Single product detail)
       }
 
       .indicator {
-        background-color:#CFD8DC;
-        border-radius: 0px 2px 2px 0px;
-        color: #263238;
-        color: #212121;
-        font-family: 'Cabin', sans-serif;  
-        font-size: 14px;
+        background-color:rgba(236,239,241 ,0.1);
+        /*border-radius: 2px 2px 2px 2px;*/
+        border: 1px ridge rgba(38,50,56 ,0.6);
+        border: 1px ridge rgba(255,138,101 ,0.4);
+        /*background-color: rgba(255,138,101 ,0.1);*/
+        
+        border-top-right-radius: 8px;
+        /*border-bottom-right-radius: 8px;*/
+        border-left: none;
+        /*border-right: none;*/
+        box-sizing: border-box;
+        color: rgba(38,50,56 ,1);
+        font-family: 'Oswald', sans-serif;  
+        font-size: 17px;
         letter-spacing: 1px;
         margin-top: 5px;
-        padding: 3px 5px;
+        padding: 3px 13px 5px 13px;
         text-align: left;
-        text-transform: uppercase;
+        max-width: fit-content;
+        /*font-style: italic;*/
+        /*text-transform: uppercase;*/
         /*max-width:10 px;      */
       }
 
@@ -145,13 +163,14 @@ Shop list item (Single product detail)
         font-family: 'Raleway', sans-serif;
         --paper-radio-button-size: 14px;
         --paper-radio-button-label-spacing: 5px;
-        --paper-radio-button-checked-color: #FF8A65;
-        --paper-radio-button-unchecked-color: #FF8A65;
-        --paper-radio-button-unchecked-ink-color: #FF8A65;
-        --paper-radio-button-checked-ink-color: #FF8A65;
+        --paper-radio-button-checked-color: rgba(69,90,100 ,1);
+        --paper-radio-button-unchecked-color: rgba(69,90,100 ,1);
+        --paper-radio-button-unchecked-ink-color: rgba(69,90,100 ,1);
+        --paper-radio-button-checked-ink-color: rgba(69,90,100 ,1);
         --paper-radio-button-label: {
-          font-size: 13px;
+          font-size: 15px;
           color: #ECEFF1;
+          color: rgba(33,33,33 ,1);
           letter-spacing: 1px;
         }
       }
@@ -270,16 +289,17 @@ Shop list item (Single product detail)
         </div>
 
         <div class="size">
-         <span class="indicator">Size</span>          
+         <span class="indicator">Stylist</span>          
          <paper-radio-group class="select-size" selected="{{size}}">
-            <paper-radio-button noink name="Small">SMALL</paper-radio-button>
-            <paper-radio-button noink name="Medium">MEDIUM</paper-radio-button>
-            <paper-radio-button noink name="Large">LARGE</paper-radio-button>
+            <paper-radio-button noink name="Owner">Salon Owner</paper-radio-button>
+            <paper-radio-button noink name="CDirector">Creative Director</paper-radio-button>
+            <paper-radio-button noink name="ADirector">Artistic Director</paper-radio-button>
+            <paper-radio-button noink name="CManager">Creative Manager</paper-radio-button>
           </paper-radio-group>
         </div>
 
         <div class="quantity">
-          <span class="indicator">Quantity</div>
+          <span class="indicator">Date</span>          
           <div class="slider">
             <span class="amount">[[quantity]]<span id="added" class="added">[[beenAdded]]</span></span>
             <paper-slider class="select-quantity" immediate-value="{{quantity}}" min="1" max="100"></paper-slider>

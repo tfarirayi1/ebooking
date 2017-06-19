@@ -7,7 +7,9 @@
     "src/shop-phone.html",
     "src/shop-basket.html",
     "src/shop-list.html",
-    "src/shop-contact.html"
+    "src/shop-contact.html",
+    "src/shop-info.html",
+    "src/shop-checkout.html"
   ],
 
   "sources": [

@@ -18,6 +18,9 @@ Shop list item (Single product detail)
 <link rel="import" href="../bower_components/paper-radio-button/paper-radio-button.html">
 <link rel="import" href="../bower_components/paper-radio-group/paper-radio-group.html">
 <link rel="import" href="../bower_components/paper-slider/paper-slider.html">
+<!-- Fullcalendar -->
+<link rel="import" href="../bower_components/fullcalendar-calendar/fullcalendar-theme.html">
+<link rel="import" href="../bower_components/fullcalendar-calendar/fullcalendar-calendar.html">
 <!-- Custom elements -->
 <link rel="import" href="my-icons.html">
 
@@ -310,7 +313,7 @@ Shop list item (Single product detail)
           </paper-button>
         </div>
     </iron-collapse>
-
+    <fullcalendar-calendar options="{{calendarOptions}}"></fullcalendar-calendar>
   </template>
 
   <script>
@@ -334,6 +337,64 @@ Shop list item (Single product detail)
                 }
               }
             }
+          }
+        },
+
+        calendarOptions: {
+          type: Object,
+          value: {
+            header: {
+                left:   '',
+                center: '',
+                right:  ''
+            },
+            height: 'auto',
+            defaultView: 'agendaDay',
+            allDaySlot: false,
+            views: {
+              agenda: {
+                snapDuration: '00:10:00',
+                slotLabelFormat: 'HH:mm',
+                slotDuration: '00:45:00',
+                slotLabelInterval: '00:15:00',
+                // slotEventOverlap: false,
+                minTime: '09:30:00',
+                maxTime: '17:30:00'
+              }
+            },
+            businessHours: {
+              start: '09:30:00',
+              end: '17:30:00'
+            },
+            selectAllow: function(selectInfo) {
+              console.log(selectInfo);
+            },
+            selectable: true,
+            select: function() {
+
+            },
+            dragRevertDuration: 300,
+            eventOverlap: false,
+            eventConstraint: 'businessHours',
+            eventSources: {
+              events: [
+                {
+                  title  : 'event3',
+                  start  : '2017-06-21T09:30:00',
+                  end    : '2017-06-21T10:00:00',
+                  allDay : false, // will make the time show
+                },
+                {
+                  title  : 'event3',
+                  start  : '2017-06-21T12:30:00',
+                  end    : '2017-06-21T013:30:00',
+                  allDay : false // will make the time show
+                }
+              ],
+              startEditable: true
+              
+            }
+              
           }
         },
 

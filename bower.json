@@ -31,7 +31,8 @@
     "gold-cc-input": "PolymerElements/gold-cc-input#^1.0.7",
     "gold-cc-expiration-input": "PolymerElements/gold-cc-expiration-input#^1.1.3",
     "gold-cc-cvc-input": "PolymerElements/gold-cc-cvc-input#^1.0.10",
-    "cc-form": "vic10us/cc-form#^1.0.12"
+    "cc-form": "vic10us/cc-form#^1.0.12",
+    "fullcalendar-calendar": "sorin-davidoi/fullcalendar-calendar#^1.1.2"
   },
   "devDependencies": {
     "web-component-tester": "^4.0.0"

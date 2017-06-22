@@ -227,6 +227,11 @@ s      }
           reflectToAttribute: true,
           observer: '_pageChanged',
         },
+
+        duration: {
+          type: Number,
+          value: 30
+        }
       },
 
       observers: [
@@ -243,6 +248,55 @@ s      }
         Polymer.RenderStatus.afterNextRender(this, function() {
           this.importHref(this.resolveUrl('shop-list.html'), null, null, true);
         });
+      },
+
+      ready: function() {
+        var slotId = 0;
+        var slotList = [];
+        for(i=0; i < 960; i++) {
+          slotId = slotId + 5;
+          slotList.push(slotId);
+        }
+
+        console.log(moment);
+        slotList.sort(function(a, b){ return b-a});
+
+        var slotsRequired = function(time) {
+          return time/5;
+        }
+
+        var slotToTime = function() {
+          var busOpen = moment(new Date('2017-01-01T09:30:00').getTime()).format('HH:mm');
+          console.log(moment(busOpen).add(30, 'm'));
+        }
+
+        slotToTime();
+
+        slotList.splice(2, 6);
+        slotList.splice(100, 12);
+        slotList.splice(150, 18);
+        slotList.splice(120, 9);
+
+          console.log(slotList);
+        for (i=0; i < slotList.length; i++) {
+          var timeInSlots = slotsRequired(this.duration);
+          var index1 = i;
+          var index2 = i + timeInSlots;
+          // time in minutes
+          var a = slotList[index1];
+          var b = slotList[index2];
+          var _duration = this.duration;
+          var adjacent = function() {
+            if ((a-b) == _duration) return true;
+            return false;
+          }
+          if(slotList.length > index2) {
+            if (adjacent()) {
+              var possibleStart = b;
+              console.log(possibleStart);
+            }
+          }
+        }
       },
 
       _onAddBasketItem: function(event) {

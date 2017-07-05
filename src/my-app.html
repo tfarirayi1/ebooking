@@ -14,6 +14,7 @@ Main application container element
 <!-- Paper elements -->
 <link rel="import" href="../bower_components/paper-fab/paper-fab.html">
 <link rel="import" href="../bower_components/paper-badge/paper-badge.html">
+<link rel="import" href="../bower_components/paper-styles/shadow.html">
 <!-- Iron elements -->
 <link rel="import" href="../bower_components/iron-pages/iron-pages.html">
 <link rel="import" href="../bower_components/iron-icon/iron-icon.html">
@@ -57,25 +58,30 @@ Main application container element
 s      }      
 
       paper-fab.basket {
-        color:rgba(38,50,56 ,0.8);
-        /*--paper-fab-background: rgba(236,239,241 ,1);*/
-        --paper-fab-background: rgb(239, 241, 243);
+        color:#ECEFF1;
+        @apply(--shadow-elevation-6dp);
+        margin-left: 3px;
+        margin-right: 3px;
+        --paper-fab-background: rgba(38,50,56 ,0.9);
         --paper-fab-keyboard-focus-background: rgba(255,138,101 ,0.1);
-        /*border: 1px inset rgba(255,138,101 ,0.8);*/
-        /*border: 1px inset #CFD8DC;*/
-        /*padding: 0px 8px;*/
-        @apply(--shadow-elevation-4dp);
-        margin-left: 5px;
-        margin-right: 5px;
-        --paper-fab-disabled-background: red;
-        
-      --paper-fab-mini: {
-        width: 40px;
-        height: 40px;
+        --paper-fab-mini: {
+          width: 40px;
+          height: 40px;
+        }
       }
 
+      paper-fab.nav {
+        color:rgba(38,50,56 ,0.8);
+        @apply(--shadow-none);
+        margin-left: 3px;
+        margin-right: 3px;
+        --paper-fab-background: rgba(239, 241, 243, 0);
+        --paper-fab-keyboard-focus-background: rgba(255,138,101 ,0.1);
+        --paper-fab-mini: {
+          width: 40px;
+          height: 40px;
+        }
       }
-
 
       iron-pages {
         padding: 13px 0px;
@@ -148,19 +154,19 @@ s      }
             <app-toolbar class="top-bar">
               <div class="tools">
                   <a href="/info">
-                <paper-fab id="top-icon" class="basket" noink mini icon="icon:info-outline"></paper-fab>
+                <paper-fab id="top-icon" class="nav" noink mini icon="icon:info-outline"></paper-fab>
                   </a>
 
                   <a href="/phone">
-                <paper-fab id="top-icon" class="basket" noink mini icon="icon:phone-iphone"></paper-fab>
+                <paper-fab id="top-icon" class="nav" noink mini icon="icon:phone-iphone"></paper-fab>
                   </a>
 
                   <a href="/contact">
-                <paper-fab id="top-icon" class="basket" noink mini icon="icon:mail-outline"></paper-fab>
+                <paper-fab id="top-icon" class="nav" noink mini icon="icon:mail-outline"></paper-fab>
                   </a>
 
                   <a href="https://ohwd.co.uk" target="_blank" class="home">
-                <paper-fab id="top-icon" class="basket" style="color: rgba(255,138,101 ,0.9);" noink mini icon="icon:domain"></paper-fab>
+                <paper-fab id="top-icon" class="nav" style="color: rgba(255,138,101 ,0.9);" noink mini icon="icon:domain"></paper-fab>
                   </a>
               </div>
             </app-toolbar>
